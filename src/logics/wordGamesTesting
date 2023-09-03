@@ -1,0 +1,161 @@
+// const questions = [
+//   {
+//     question: "What are all the words that contain A and E?",
+//     testFunction: (containsAE = (returnArray) => {
+//       console.log(returnArray);
+//       for (let i = 0; i < returnArray.length; i++) {
+//         if (
+//           !returnArray[i].includes("A" || "a") ||
+//           !returnArray[i].includes("E" || "e")
+//         ) {
+//           console.log(returnArray[i]);
+//           return false;
+//         }
+//       }
+//       return true;
+//     }),
+//   },
+//   {
+//     question: "Find all the palindromes in the list!",
+
+//     testFunction: (returnArray) => {
+//       for (let i = 0; i < returnArray.length; i++) {
+//         const reverseWord = returnArray[i].split("").reverse().join("");
+//         if (returnArray[i] !== reverseWord) {
+//           return false;
+//         }
+//       }
+//       return true;
+//     },
+//   },
+//   {
+//     question: "What words start with the letter 'F'?",
+
+//     testFunction: (allBeginsWithF = (returnArray) => {
+//       for (let i = 0; i < returnArray.length; i++) {
+//         wordUpper = returnArray[i].toUpperCase();
+//         if (wordUpper[0] !== "F") {
+//           return false;
+//         }
+//       }
+//       return true;
+//     }),
+//   },
+// ];
+
+const miniWords = [
+  "AARDWOLVES",
+  "AARGH",
+  "ANTENNIFEROUS",
+  "BRR",
+  "CUESTAS",
+  "CUFF",
+  "FIDDI",
+  "funny",
+  "FAIR",
+  "FANTASTIC",
+  "LUNISOLAR",
+  "LUNITIDAL",
+  "LUNK",
+  "POLYPTYCHS",
+  "POLYPUS",
+  "POLYPUSES",
+  "POLYRHYTHM",
+  "POLYRHYTHMIC",
+  "PROGRAM",
+  "PROGRESS",
+  "PROLIFIC",
+  "RACECAR",
+  "REST",
+  "SUPERORDINARY",
+  "tattarrattat",
+  "TOKTOKKIE",
+  "TOKTOKKIES",
+  "TOLA",
+  "TOLAN",
+  "TSKTSK",
+];
+
+// for each question
+// "What are all the words that contain A and E?"
+// write a function that answers the question
+
+const containsAE = function (array) {
+  const solutionsArray = [];
+  array.forEach((word) => {
+    if (word.includes("A" || "a") && word.includes("E" || "e")) {
+      solutionsArray.push(word);
+    }
+  });
+  return solutionsArray;
+};
+
+const trueAE = function (returnArray) {
+  console.log(returnArray);
+  for (let i = 0; i < returnArray.length; i++) {
+    if (
+      !returnArray[i].includes("A" || "a") ||
+      !returnArray[i].includes("E" || "e")
+    ) {
+      console.log(returnArray[i]);
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(trueAE(["AE", "EA", "AA", "AB"]));
+//"Your return values will appear here"
+// and a function that tests if the return answers the question
+
+// for each question "Find all the palindromes in the list!"
+// write a function that answers the question
+// const findPalindromes = (array) => {
+//   solutionsArray = [];
+//   array.forEach((word) => {
+//     const reverseWord = word.split("").reverse().join("");
+//     if (word == reverseWord) {
+//       solutionsArrayword.push(word);
+//     }
+//   });
+//   return solutionsArray;
+// };
+
+// and a function that tests if the return answers the question
+// const allPalindromes = (returnArray) => {
+//   for (let i = 0; i < returnArray.length; i++) {
+//     const reverseWord = returnArray[i].split("").reverse().join("");
+//     if (returnArray[i] !== reverseWord) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// for each question "What words start with the letter 'F'?
+// write a function that answers the quetion- what word start with "f"?
+
+// function startsWithF(array) {
+//   const solutionsArray = [];
+//   array.forEach((word) => {
+//     if (word[0] === "F" || word[0] === "f") {
+//       solutionsArray.push(word);
+//     }
+//   });
+//   return solutionsArray;
+// }
+("Your return values will appear here");
+
+// and a function that tests if the return answers the question
+
+// const allbeginsWithF = (returnArray) => {
+//   for (let i = 0; i < returnArray.length; i++) {
+//     wordUpper = returnArray[i].toUpperCase();
+//     if (wordUpper[0] !== "F") {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// console.log(allbeginsWithF(startsWithF()));
